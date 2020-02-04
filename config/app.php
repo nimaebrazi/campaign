@@ -165,8 +165,10 @@ return [
         /*
          * Package Service Providers...
          */
+        \App\Infrastructure\Repository\RepositoryServiceProvider::class,
+        \App\Service\Voucher\Statistics\VoucherStatisticsServiceProvider::class,
+        \App\Service\Voucher\Logger\VoucherUsage\VoucherUsageLoggerServiceProvider::class,
 
-        
         /*
          * Application Service Providers...
          */

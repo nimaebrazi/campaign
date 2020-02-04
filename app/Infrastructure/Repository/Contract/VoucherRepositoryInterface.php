@@ -9,5 +9,9 @@ namespace App\Infrastructure\Repository\Contract;
  */
 interface VoucherRepositoryInterface
 {
-
+    /**
+     * @param string $code
+     * @return mixed
+     */
+    public function findByCode($code);
 }
