@@ -18,6 +18,7 @@ class VoucherUsageLogRepository implements VoucherUsageLogRepositoryIntreface
     {
         $voucher = VoucherUsageLog::where('voucher_code', $code)
             ->where('phone_number', $phoneNumber)
+            ->where('is_winner', false)
             ->first();
 
         if (is_null($voucher)) {
