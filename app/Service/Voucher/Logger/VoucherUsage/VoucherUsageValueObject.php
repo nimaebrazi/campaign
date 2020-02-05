@@ -23,6 +23,12 @@ class VoucherUsageValueObject
     protected $phoneNumber;
 
     /**
+     * @var bool
+     */
+    protected $isWinner = true;
+
+
+    /**
      * VoucherUsageValueObject constructor.
      * @param Voucher $voucher
      * @param string $phoneNumber
@@ -79,5 +85,22 @@ class VoucherUsageValueObject
         return $this;
     }
 
+    /**
+     * @return bool
+     */
+    public function isWinner(): bool
+    {
+        return $this->isWinner;
+    }
 
+    /**
+     * @param bool $isWinner
+     * @return self
+     */
+    public function setIsWinner(bool $isWinner): self
+    {
+        $this->isWinner = $isWinner;
+
+        return $this;
+    }
 }

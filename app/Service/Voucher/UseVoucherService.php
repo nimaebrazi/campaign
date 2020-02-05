@@ -111,6 +111,7 @@ class UseVoucherService
 
         // When exception throws we catch it for dispatching a job and rethrow it.
         if ($this->isVoucherExceededOfLimitUsage($voucher)) {
+            $voucherUsageModel->setIsWinner(false);
             $this->jobDispatcher->loserJob($voucherUsageModel);
             throw VoucherException::exceededVoucherCodeUsage();
         }

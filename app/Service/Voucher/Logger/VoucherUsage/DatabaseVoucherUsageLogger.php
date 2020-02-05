@@ -24,6 +24,7 @@ class DatabaseVoucherUsageLogger implements VoucherUsageLogger
             'phone_number' => $voucherUsageModel->getPhoneNumber(),
             'voucher_id'   => $voucherUsageModel->getVoucher()->id,
             'voucher_code' => $voucherUsageModel->getVoucher()->code,
+            'is_winner'    => $voucherUsageModel->isWinner()
         ]);
 
         return $voucherUsageLog->save();
